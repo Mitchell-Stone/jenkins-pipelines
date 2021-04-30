@@ -20,6 +20,7 @@ pipeline {
         stage("clean-up"){
             steps {
                 echo "Cleaning up artifacts"
+                echo "Finished"
             }
         }
     }
