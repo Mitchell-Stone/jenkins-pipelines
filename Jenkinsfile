@@ -1,11 +1,6 @@
 pipeline {
     agent any 
     stages {
-        stage("chcekout"){
-            steps {
-                echo "Checking out repository"
-            }
-        }
         stage("build"){
             steps {
                 echo "Building the application"
