@@ -1,10 +1,10 @@
 pipeline {
-    agent any 
+    agent { docker { image 'node:14-alpine' } }
     stages {
         stage("build"){
             steps {
                 echo "Building the application"
-                echo "Additional text for webhook test"
+                sh 'npm --version-'
             }
         }
         stage("test"){
