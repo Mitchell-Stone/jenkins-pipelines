@@ -6,6 +6,7 @@ pipeline {
                 echo "Building the application"
                 nodejs('NodeJS-16') {
                     sh 'npm --version'
+                    sh 'npm config set cafile /certs/nscacert.pem'
                     sh 'npm i'
                 }
             }
