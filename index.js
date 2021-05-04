@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 function main(){
     axios({
         method: 'get',
