@@ -16,8 +16,6 @@
     "url": "https://github.com/Mitchell-Stone/jenkins-pipelines/issues"
   },
   "homepage": "https://github.com/Mitchell-Stone/jenkins-pipelines#readme",
-  "dependencies": {
-    "axios": "^0.21.1"
-  },
+  "dependencies": {},
   "devDependencies": {}
 }
