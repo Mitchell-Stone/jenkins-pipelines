@@ -1,10 +1,15 @@
 pipeline {
-    agent { docker { image 'node:14-alpine' } }
+    agent { label "linux" }
     stages {
         stage("build"){
             steps {
                 echo "Building the application"
-                sh 'npm --version-'
+                sh """docker build -t node_image"""
+            }
+        }
+        stage("run"){
+            steps {
+                echo """docker run --rm node_image"""
             }
         }
         stage("test"){
