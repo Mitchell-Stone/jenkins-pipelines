@@ -1,11 +1,4 @@
-const axios = require('axios');
-
 function main(){
-    axios({
-        method: 'get',
-        url: 'https://www.google.com/'
-    }).then(resp => {
-        console.log(resp.data)
-    })
+   console.log('Hello, this is a script being execute within Jenkins')
 }
 main()
