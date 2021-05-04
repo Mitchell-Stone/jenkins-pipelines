@@ -4,6 +4,9 @@ pipeline {
         stage("build"){
             steps {
                 echo "Building the application"
+                nodejs('NodeJS-16') {
+                    sh 'npm --version'
+                }
             }
         }
         stage("run"){
