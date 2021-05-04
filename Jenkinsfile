@@ -4,12 +4,11 @@ pipeline {
         stage("build"){
             steps {
                 echo "Building the application"
-                sh """docker build -t node_image"""
             }
         }
         stage("run"){
             steps {
-                echo """docker run --rm node_image"""
+                echo "Running required tools"
             }
         }
         stage("test"){
