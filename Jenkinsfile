@@ -6,12 +6,16 @@ pipeline {
                 echo "Building the application"
                 nodejs('NodeJS-16') {
                     sh 'npm --version'
+                    sh 'npm i'
                 }
             }
         }
         stage("run"){
             steps {
                 echo "Running required tools"
+                nodejs('NodeJS-16') {
+                    sh 'node index.js'
+                }
             }
         }
         stage("test"){
