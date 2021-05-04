@@ -1,0 +1,18 @@
+FROM alpine:latest
+
+COPY ./certs/nscacert.pem /certs/
+
+RUN apt-get update && apt-get install -y \
+  ca-certificates \
+  curl \
+  sudo
+
+RUN curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+RUN sudo apt-get install -y nodejs
+RUN echo "NODE Version:" && node --version
+RUN echo "NPM Version:" && npm --version
+
+RUN npm config set cafile /certs/nscacert.pem
+
+RUN npm install -g typescript
+RUN echo "Typescript installed"
